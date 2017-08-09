@@ -1,7 +1,7 @@
 <?php
 
 return [
-    \ZanPHP\Utilities\DesignPattern\Command::class => "Zan\\Framework\\Utilities\\DesignPattern",
+    \ZanPHP\Utilities\DesignPattern\Command::class => "Zan\\Framework\\Utilities\\DesignPattern\\Command",
     \ZanPHP\Utilities\DesignPattern\Filter::class => "Zan\\Framework\\Utilities\\DesignPattern\\Filter",
     \ZanPHP\Utilities\DesignPattern\FilterChain::class => "Zan\\Framework\\Utilities\\DesignPattern\\FilterChain",
     \ZanPHP\Utilities\DesignPattern\Instance::class => "Zan\\Framework\\Utilities\\DesignPattern\\Instance",
