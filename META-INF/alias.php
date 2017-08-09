@@ -7,8 +7,8 @@ return [
     \ZanPHP\Utilities\DesignPattern\Instance::class => "Zan\\Framework\\Utilities\\DesignPattern\\Instance",
     \ZanPHP\Utilities\DesignPattern\Registry::class => "Zan\\Framework\\Utilities\\DesignPattern\\Registry",
 
-    \ZanPHP\Utilities\Encrpt\SimpleEncrypt::class => "Zan\\Framework\\Utilities\\DesignPattern\\SimpleEncrypt",
-    \ZanPHP\Utilities\Encrpt\Uuid::class => "Zan\\Framework\\Utilities\\DesignPattern\\Uuid",
+    \ZanPHP\Utilities\Encrpt\SimpleEncrypt::class => "Zan\\Framework\\Utilities\\Encrpt\\SimpleEncrypt",
+    \ZanPHP\Utilities\Encrpt\Uuid::class => "Zan\\Framework\\Utilities\\Encrpt\\Uuid",
 
     \ZanPHP\Utilities\File\File::class => "Zan\\Framework\\Utilities\\File\\File",
     \ZanPHP\Utilities\File\OnceFile::class => "Zan\\Framework\\Utilities\\File\\OnceFile",
