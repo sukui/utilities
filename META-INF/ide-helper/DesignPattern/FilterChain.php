@@ -2,40 +2,22 @@
 
 namespace Zan\Framework\Utilities\DesignPattern;
 
-
 class FilterChain
 {
-    private $request = null;
-    private $response = null;
-    private $context = null;
-
-    private $filters = [];
+    private $FilterChain;
 
     public function __construct($request, $response, $context)
     {
-        $this->request = $request;
-        $this->response = $response;
-        $this->context = $context;
-        $this->filters = [];
+        $this->FilterChain = new \ZanPHP\Utilities\DesignPattern\FilterChain($request, $response, $context);
     }
 
-    public function addFilter(Filter $filter)
+    public function addFilter($filter)
     {
-        $this->filters[] = $filter;
+        $this->FilterChain->addFilter($filter);
     }
 
     public function execute()
     {
-        if(empty($this->filters)){
-            return null;
-        }
-
-        foreach($this->filters as $filter){
-            $filter->doFilter(
-                $this->request,
-                $this->response,
-                $this->context
-            );
-        }
+        $this->FilterChain->execute();
     }
 }

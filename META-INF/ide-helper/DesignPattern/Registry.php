@@ -2,27 +2,20 @@
 
 namespace Zan\Framework\Utilities\DesignPattern;
 
-
 class Registry
 {
-    private static $classMap = [];
-
     public static function get($key, $default=null)
     {
-        if(!isset(self::$classMap[$key])) {
-            return $default;
-        }
-
-        return self::$classMap[$key];
+        \ZanPHP\Utilities\DesignPattern\Registry::get($key, $default);
     }
 
     public static function set($key, $value)
     {
-        self::$classMap[$key] = $value;
+        \ZanPHP\Utilities\DesignPattern\Registry::set($key, $value);
     }
 
     public static function contain($key)
     {
-        return isset(self::$classMap[$key]);
+        \ZanPHP\Utilities\DesignPattern\Registry::contain($key);
     }
 }

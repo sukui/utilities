@@ -1,34 +1,28 @@
 <?php
-namespace Zan\Framework\Utilities\Locker;
 
-use Zan\Framework\Foundation\Exception\System\InvalidArgumentException;
+namespace Zan\Framework\Utilities\Locker;
 
 class ApcuLocker
 {
-    private $key = null;
+    private $ApcuLocker;
 
     public function __construct($key)
     {
-        if (!$key) {
-            throw new InvalidArgumentException('ApcuLocker key is required!', 10002);
-        }
-
-        $this->key = $key;
-        apcu_store($this->key, 0);
+        $this->ApcuLocker = new \ZanPHP\Utilities\Locker\ApcuLocker();
     }
 
     public function isLocked()
     {
-        return !!apcu_fetch($this->key);
+        $this->ApcuLocker->isLocked();
     }
 
     public function lock()
     {
-        return apcu_cas($this->key, 0, 1);
+        $this->ApcuLocker->lock();
     }
 
     public function unlock()
     {
-        return apcu_cas($this->key, 1, 0);
+        $this->ApcuLocker->unlock();
     }
 }
