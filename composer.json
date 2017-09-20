@@ -5,7 +5,7 @@
     "zanphp/coroutine": "dev-laogui",
     "zanphp/contracts": "dev-master",
     "zanphp/internal-sdk": "dev-master",
-    "zanphp/http-foundation": "dev-laogui",
+    "zanphp/http-foundation": "dev-master",
     "zanphp/support": "dev-master"
   },
   "autoload": {
